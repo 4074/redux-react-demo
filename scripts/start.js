@@ -13,7 +13,8 @@ function setupCompiler() {
 
 function runDevServer(port) {
     var devServer = new WebpackDevServer(compiler, {
-        hot: true
+        hot: true,
+        quiet: true
     })
 
     devServer.listen(port, (err, result) => {

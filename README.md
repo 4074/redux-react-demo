@@ -1,7 +1,7 @@
 # redux-react-demo
 
 ```
-npm install --save-dev babel-cli babel-preset-es2015 babel-preset-react
+npm install --save-dev babel-core babel-preset-es2015 babel-preset-react babel-loader
 // add ["es2015", "react"] to package.json
 
 // webpack

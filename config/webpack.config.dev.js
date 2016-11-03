@@ -1,21 +1,33 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const paths = require('./paths')
 
 module.exports = {
     entry: [
         require.resolve('webpack-dev-server/client') + '?/',
         require.resolve('webpack/hot/dev-server'),
-        path.resolve(__dirname, '../src/index')
+        paths.entry
     ],
     output: {
-        path: path.resolve(__dirname, '../build'),
-        filename: 'bundle.js'
+        path: paths.build,
+        filename: 'bundle.js',
+        publicPath: '/'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                include: paths.src,
+                loader: 'babel',
+                query: require('./babel.dev')
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            template: path.resolve(__dirname, '../index.html')
+            template: paths.index
         }),
         new webpack.HotModuleReplacementPlugin()
     ]
