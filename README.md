@@ -10,11 +10,17 @@ npm install --save-dev opn
 
 // react
 npm install --save react
+//npm install --save-dev babel-plugin-transform-class-properties
+// { ...todo, completed: true }
 
 // ant design
 npm install --save antd
 npm install --save-dev babel-plugin-import
 // add plugin config ['import', {libraryName: 'antd', style: 'css'}]
 
+// redux
+npm install --save redux react-redux
 
+// express
+npm install --save express
 ```
