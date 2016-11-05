@@ -4,5 +4,8 @@ module.exports = {
     presets: [
         'es2015',
         'react'
+    ],
+    plugins: [
+        ['import', {libraryName: 'antd', style: 'css'}]
     ]
 }
