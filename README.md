@@ -23,4 +23,7 @@ npm install --save redux react-redux
 
 // express
 npm install --save express
+
+// server rendering hot load
+npm install --save-dev webpack-dev-middleware webpack-hot-middleware
 ```

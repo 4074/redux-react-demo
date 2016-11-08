@@ -5,14 +5,14 @@ const paths = require('./paths')
 
 module.exports = {
     entry: [
-        require.resolve('webpack-dev-server/client') + '?/',
-        require.resolve('webpack/hot/dev-server'),
+        // require.resolve('webpack-dev-server/client') + '?/',
+        // require.resolve('webpack/hot/dev-server'),
         paths.entry
     ],
     output: {
         path: paths.build,
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/build/'
     },
     module: {
         loaders: [

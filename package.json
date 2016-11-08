@@ -12,6 +12,7 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-loader": "^6.2.7",
     "babel-plugin-import": "^1.0.1",
@@ -20,15 +21,19 @@
     "html-webpack-plugin": "^2.24.1",
     "opn": "^4.0.2",
     "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-hot-middleware": "^2.13.1"
   },
   "babel": {
     "presets": [
-      "es2015"
+      "es2015",
+      "react"
     ]
   },
   "scripts": {
-    "start": "node ./scripts/start.js"
+    "start": "node ./scripts/start.js",
+    "serve": "babel-node ./server/index.js"
   },
   "repository": {
     "type": "git",
